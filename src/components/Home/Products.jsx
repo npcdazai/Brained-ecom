@@ -81,7 +81,7 @@ const Products = () => {
         <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }} gap="6" overflowX="hidden" px={6} >
           {filteredProducts?.map((val) => (
             <div key={val.id}>
-              <VStack alignItems="flex-start" w="100%" >
+              <VStack alignItems="center" w="100%" >
                 <Box height={{ base: "200px", md: "250px" }} w={{ base: "200px", md: "250px" }} position="relative" >
                   <Image src={val.images[0]} h="100%" w="100%" />
                   <Box bgColor="#EA4B48" color="#fff" py={1} px={2} rounded={"md"} position="absolute" top={2} left={2} >Sale {val.discountPercentage} %</Box>
