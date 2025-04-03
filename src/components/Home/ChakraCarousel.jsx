@@ -1,9 +1,10 @@
 import React from 'react'
 import BannerFruit from "../../assets/bg/bannerFruit.png"
 import { Button, HStack, Image, Text, VStack } from '@chakra-ui/react'
+import { NavLink } from 'react-router-dom'
 
 
-const ChakraCarousel = () => {
+const Banner = () => {
   return (
     <HStack w="100%" px={6} justifyContent="space-between" >
       <Image src={BannerFruit} />
@@ -14,13 +15,15 @@ const ChakraCarousel = () => {
             Organic Food</Text>
         </VStack>
         <Text as="span" color="#00B207" fontWeight={400} >Free shipping on all your order. we deliver, you enjoy</Text>
+        <NavLink to="/contact-us" >
+          <Button bgColor="#00B207" color="#fff" >
+            Contact Us
+          </Button>
+        </NavLink>
 
-        <Button bgColor="#00B207" color="#fff" >
-          Shop now
-        </Button>
       </VStack>
     </HStack>
   )
 }
 
-export default ChakraCarousel
+export default Banner

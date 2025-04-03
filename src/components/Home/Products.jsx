@@ -45,7 +45,6 @@ const Products = () => {
     <MainFrame>
       <VStack w="100%" gap={8} zIndex="-1px" >
         <Heading mt={4} fontSize="xx-large" fontWeight={600} >Introducing Our Products</Heading>
-        <Menubar />
 
         <HStack mb={4}>
 
