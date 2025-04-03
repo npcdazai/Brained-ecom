@@ -9,7 +9,9 @@ import { CiLocationOn, CiPhone } from 'react-icons/ci';
 import { FaRegMessage } from 'react-icons/fa6';
 
 const schema = yup.object().shape({
-    fullName: yup.string().required('Full Name is required'),
+    firstName: yup.string().required('First Name is required'),
+    lastName: yup.string().required('Last Name is required'),
+    phoneNo: yup.string().matches(/^\d{10}$/, "Phone number must be exactly 10 digits").required('Phone number  is required'),
     email: yup.string().email('Invalid email').required('Email is required'),
     description: yup.string().required('Description is required'),
 });
@@ -21,7 +23,9 @@ const contacts = [
 ];
 
 const inputDetails = [
-    { id: 'fullName', label: 'Full Name' },
+    { id: 'firstName', label: 'First Name' },
+    { id: 'lastName', label: 'Last Name' },
+    { id: 'phoneNo', label: 'Phone Name' },
     { id: 'email', label: 'Email' },
     { id: 'description', label: 'Description' },
 ];
@@ -42,7 +46,7 @@ const ContactUs = () => {
 
     return (
         <MainFrame>
-            <HStack w="100%" h="calc(100vh - 9.8rem)" px={6}>
+            <HStack w="100%" h="calc(100vh - 5rem)" px={6}>
                 <VStack w="30%" gap={8}>
                     {contacts.map((val) => (
                         <VStack key={val.id} w="50%">
@@ -63,7 +67,7 @@ const ContactUs = () => {
                             <Text color="red.500" fontSize="sm">{errors[val.id]?.message}</Text>
                         </Field.Root>
                     ))}
-                    <Button type="submit" colorScheme="green">Send Message</Button>
+                    <Button type="submit" size={{ base: "sm", md: "md" }} bgColor="#00B207" color="#fff">Send Message</Button>
                 </VStack>
             </HStack>
         </MainFrame>

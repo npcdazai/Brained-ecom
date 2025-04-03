@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Error from "./pages/Error"
 import ContactUs from "./pages/ContactUs"
+import Footer from "./FunctionalComponents/Footer"
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="*" element={<Error/>}/>
           <Route path="/contact-us" element={<ContactUs/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </Box>
   )
