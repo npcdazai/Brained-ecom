@@ -40,10 +40,10 @@ const Products = () => {
 
   return (
     <MainFrame>
-      <VStack w="100%" gap={8} zIndex="-1px" >
+      <VStack w="100%" gap={8} zIndex="-1px" px={"1rem"} >
         <Heading fontSize={{ base: "lg", md: "xl", lg: "2xl" }} mt={4}  fontWeight={600} >Introducing Our Products</Heading>
 
-        <HStack mb={4}>
+        <HStack mb={4}  >
 
           <InputGroup
             flex="1"
